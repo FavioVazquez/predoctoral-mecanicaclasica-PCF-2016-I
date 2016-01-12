@@ -143,6 +143,214 @@ por qué?
 
 \underline{Solución:} \vspace{.3cm} 
 
+Debemos ver en qué casos, con respecto a la dirección de la velocidad angular, el 
+movimiento será estable y con respecto a qué eje principal. Partimos de las ecuaciones 
+de Euler para un cuerpo rígido al cual no se le aplican torcas,
+
+\begin{align}
+ \label{eq:pregunta2eq1}
+ I_1\dot{\omega}_1 - \omega_2\omega_3(I_2 - I_3) = 0, \\
+ \label{eq:pregunta2eq2}
+ I_2\dot{\omega}_2 - \omega_3\omega_1(I_3 - I_1) = 0, \\
+ \label{eq:pregunta2eq3}
+ I_3\dot{\omega}_3 - \omega_1\omega_2(I_1 - I_2) = 0.
+\end{align}
+
+Estas ecuaciones nos permitirán estudiar, cuando el cuerpo esté en movimiento, qué 
+condiciones deben cumplirse para que el movimiento sea estable.
+
+\vspace{.3cm}
+
+Si suponemos que la velocidad angular es en dirección al eje $x$, entonces se 
+cumplirá que $\omega_1 \gg \omega_2,\omega_3$. Ahora debido a que $\omega_2$ y 
+$\omega_3$ se mantendrán pequeños con respecto a $\omega_1$, el movimiento será 
+estable y debido a que no hay torque $|\overrightarrow{\omega}| = \text{cte}$, y 
+debido a que $\omega = \sqrt{\omega_1^2 + \omega_2^2 + \omega_3^2}$, tendremos que 
+$\omega_2^2 + \omega_3^2 \ll \omega_1^2$, y entonces $\omega = \sqrt{\omega_1^2} = 
+\omega_1$, y entonces podemos tomar a $\omega_1$ como constante, al menos 
+a primer orden.
+
+Tomando la derivada temporal de \eqref{eq:pregunta2eq2} 
+
+\begin{equation}
+ \frac{d}{dt}\left[I_2\dot{\omega}_2 - \omega_3\omega_1(I_3 - I_1) \right] = 0,
+\end{equation}
+
+y debido a que $\omega_1$ es constante, 
+
+\begin{equation}
+ I_2\ddot{\omega}_2 - \dot{\omega_3}\omega_1(I_3 - I_1) = 0,
+\end{equation}
+
+\begin{equation}
+ \therefore \ddot{\omega}_2 = \frac{\dot{\omega}_3\omega_1(I_3-I_1)}{I_2}.
+  \label{eq:pregunta2eq4}
+\end{equation}
+
+Sustituyendo $\dot{\omega}_3$ de \eqref{eq:pregunta2eq3}, 
+
+\begin{equation}
+ \ddot{\omega_2} = \frac{\omega_2\omega_1^2(I_3 - I_1)(I_1 - I_2)}{I_2I_3}.
+ \label{eq:pregunta2eq5}
+\end{equation}
+
+Tomando la derivada temporal de \eqref{eq:pregunta2eq3} 
+
+\begin{equation}
+ \frac{d}{dt}\left[I_3\dot{\omega}_3 - \omega_1\omega_2(I_1 - I_2) \right] = 0,
+\end{equation}
+
+\begin{equation}
+ I_3\ddot{\omega}_3 - dot{\omega}_2\omega_1(I_1 - I_2) = 0,
+\end{equation}
+
+\begin{equation}
+ \therefore \ddot{\omega}_3 = \frac{\dot{\omega}_2\omega_1(I_1-I_2)}{I_3}.
+ \label{eq:pregunta2eq6}
+\end{equation}
+
+Sustituyendo $\dot{\omega}_2$ de \eqref{eq:pregunta2eq2}, en \eqref{eq:pregunta2eq6}
+
+\begin{equation}
+ \ddot{\omega_3} = \frac{\omega_3\omega_1^2(I_1 - I_2)(I_3 - I_1)}{I_3I_2}.
+ \label{eq:pregunta2eq7}
+\end{equation}
+
+Ahora como $I_1 > I_2,I_3$, los lados derechos de \eqref{eq:pregunta2eq5} y 
+\eqref{eq:pregunta2eq7} serán negativos y por lo tanto tendremos un equilibrio 
+estable, con un movimiento tipo oscilador armónico, y $\omega_2$ y $\omega_3$ 
+oscilarán al rededor del punto de equilibrio. Vemos entonces que un movimiento 
+en dirección del eje $x$ es estable, y por consiguiente el momento principal 
+de inercia $I_1$ será estable. 
+
+\vspace{.3cm}
+
+Supongamos ahora que el movimiento es en dirección al eje $z$, utilizando los 
+mismos argumentos, vemos que debido a que $\omega_3 \gg \omega_1,\omega_2$, 
+$|\omega| = \text{cte}$, entonces $\omega = \omega_3$, y podemos considerar 
+que $\omega_3$ es estable, al menos a primer orden. 
+
+Tomando la derivada temporal de \eqref{eq:pregunta2eq1} 
+
+\begin{equation}
+ \frac{d}{dt}\left[I_1\dot{\omega}_1 - \omega_2\omega_3(I_2 - I_3) \right] = 0,
+\end{equation}
+
+y debido a que $\omega_3$ es constante, 
+
+\begin{equation}
+ I_1\ddot{\omega}_1 - \dot{\omega}_2\omega_3(I_2 - I_3) = 0,
+\end{equation}
+
+\begin{equation}
+ \therefore \ddot{\omega}_1 = \frac{\dot{\omega}_2\omega_3(I_2-I_3)}{I_1}.
+  \label{eq:pregunta2eq8}
+\end{equation}
+
+Sustituyendo $\dot{\omega}_2$ de \eqref{eq:pregunta2eq2}, 
+
+\begin{equation}
+ \ddot{\omega_1} = \frac{\omega_1\omega_3^2(I_2 - I_3)(I_3 - I_1)}{I_2I_1}.
+ \label{eq:pregunta2eq9}
+\end{equation}
+
+Tomando la derivada temporal de \eqref{eq:pregunta2eq2} 
+
+\begin{equation}
+ \frac{d}{dt}\left[I_2\dot{\omega}_2 - \omega_3\omega_1(I_3 - I_1) \right] = 0,
+\end{equation}
+
+\begin{equation}
+ I_2\ddot{\omega}_2 - \dot{\omega}_1\omega_3(I_3 - I_1) = 0,
+\end{equation}
+
+\begin{equation}
+ \therefore \ddot{\omega}_3 = \frac{\dot{\omega}_1\omega_3(I_3-I_1)}{I_2}.
+ \label{eq:pregunta2eq10}
+\end{equation}
+
+Sustituyendo $\dot{\omega}_1$ de \eqref{eq:pregunta2eq1}, en \eqref{eq:pregunta2eq10}
+
+\begin{equation}
+ \ddot{\omega_2} = \frac{\omega_2\omega_3^2(I_3 - I_1)(I_2- I_3)}{I_1I_2}.
+ \label{eq:pregunta2eq11}
+\end{equation}
+
+De nuevo como $I_1 > I_2,I_3$, los lados derechos de \eqref{eq:pregunta2eq9} y 
+\eqref{eq:pregunta2eq11} serán negativos y por lo tanto tendremos un equilibrio 
+estable, con un movimiento tipo oscilador armónico, y $\omega_1$ y $\omega_2$ 
+oscilarán al rededor del punto de equilibrio. Vemos entonces que un movimiento 
+en dirección del eje $z$ es estable, y por consiguiente el momento principal 
+de inercia $I_3$ será estable. 
+
+\vspace{.3cm}
+
+Por último, supongamos que el movimiento es en dirección al eje $y$,  y utilizando los 
+mismos argumentos, vemos que debido a que $\omega_2 \gg \omega_1,\omega_3$, 
+$|\omega| = \text{cte}$, entonces $\omega = \omega_2$, y podemos considerar 
+que $\omega_2$ es estable, al menos a primer orden. 
+
+Tomando la derivada temporal de \eqref{eq:pregunta2eq1} 
+
+\begin{equation}
+ \frac{d}{dt}\left[I_1\dot{\omega}_1 - \omega_2\omega_3(I_2 - I_3) \right] = 0,
+\end{equation}
+
+y debido a que $\omega_2$ es constante, 
+
+\begin{equation}
+ I_1\ddot{\omega}_1 - \dot{\omega}_3\omega_2(I_2 - I_3) = 0,
+\end{equation}
+
+\begin{equation}
+ \therefore \ddot{\omega}_1 = \frac{\dot{\omega}_3\omega_2(I_2-I_3)}{I_1}.
+  \label{eq:pregunta2eq12}
+\end{equation}
+
+Sustituyendo $\dot{\omega}_3$ de \eqref{eq:pregunta2eq3}, 
+
+\begin{equation}
+ \ddot{\omega_1} = \frac{\omega_1\omega_2^2(I_1 - I_2)(I_2 - I_3)}{I_3I_1}.
+ \label{eq:pregunta2eq13}
+\end{equation}
+
+Tomando la derivada temporal de \eqref{eq:pregunta2eq3} 
+
+\begin{equation}
+ \frac{d}{dt}\left[I_3\dot{\omega}_3 - \omega_1\omega_2(I_1 - I_2) \right] = 0,
+\end{equation}
+
+\begin{equation}
+ I_3\ddot{\omega}_3 - \dot{\omega}_1\omega_2(I_1 - I_2) = 0,
+\end{equation}
+
+\begin{equation}
+ \therefore \ddot{\omega}_3 = \frac{\dot{\omega}_1\omega_2(I_1-I_2)}{I_3}.
+ \label{eq:pregunta2eq14}
+\end{equation}
+
+Sustituyendo $\dot{\omega}_1$ de \eqref{eq:pregunta2eq1}, en \eqref{eq:pregunta2eq14}
+
+\begin{equation}
+ \ddot{\omega_3} = \frac{\omega_3\omega_2^2(I_1 - I_2)(I_2- I_3)}{I_3I_2}.
+ \label{eq:pregunta2eq15}
+\end{equation}
+
+Como $I_2 > I_3$ y $I_1 > I_2$, los lados derechos de \eqref{eq:pregunta2eq13} y 
+\eqref{eq:pregunta2eq15} serán positivos y por lo tanto tendremos un equilibrio 
+inestable. Vemos entonces que un movimiento en dirección del eje $y$ es inestable, 
+y por consiguiente el momento principal de inercia $I_2$ será estable. 
+
+\vspace{.3cm}
+
+Entonces concluimos que los momentos de inercia estables son el mayor $I_1$ y 
+el menor $I_3$, siendo $I_2$ el intermedio, inestable. Esto puede verse fácilmente 
+si intentamos lanzar una raqueta al aire al mismo tiempo que le imprimimos una 
+rotación, ya sea en torno al eje definido por el mango, al eje perpendicular a la 
+pala o al perpendicular al mango contenido en la pala; en los primeros casos es 
+fácil hacerlo sin producir fuertes bamboleos, en el tercero es prácticamente 
+imposible (que es el eje correspondiente al momento principal de inercia intermedio).
+
 \subsection{Pregunta 3}
 
 Sobre un piso sin fricción, una partícula puntual choca elásticamente con una mancuerna de dos 
