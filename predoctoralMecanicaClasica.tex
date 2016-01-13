@@ -438,4 +438,155 @@ eje de rotación.
 
 \underline{Solución:} \vspace{.3cm}
 
+\begin{enumerate}[label=\alph*)]
+ \item R:
+\end{enumerate}
+
+Debido a que la única fuerza que existe es la gravitacional, el potencial se 
+escribiría como (utilizando coordenadas polares)
+
+\begin{equation}
+ V = mgz = mgR\cos{\theta},
+\end{equation}
+
+ahora debido a que se solicita que el cero de la energía potencial esté en el piso, 
+hay que cambiar el punto de referencia para el potencial, y ya que al potencial 
+gravitacional solo le importa la diferencia entre el punto de referencia y el suelo, 
+para acomodar esta condición hacemos primero,
+
+\begin{equation}
+ V = mg(z - z_0),
+\end{equation}
+
+donde el $z_0$ en este caso será $-R$ ya que el eje $z$ se ha tomando como positivo 
+hacia arriba, entonces 
+
+\begin{equation}
+ V = mg(z + R) = mg(R\cos{\theta} + R),
+\end{equation}
+
+\begin{equation}
+ \therefore V = mgR(\cos{\theta} + 1).
+\end{equation}
+
+La energía cinética del sistema se escribe como 
+
+\begin{equation}
+ T = \frac{m}{2}(\dot{x}^2 + \dot{y}^2 + \dot{z}^2),
+\end{equation}
+
+debido a que existe la constricción de que $R = \text{cte}$, y recordamos que 
+estamos usando coordenadas esféricas, tenemos que 
+
+\begin{align*}
+ \dot{x} = R\dot{\theta}\cos{\theta}\cos{\phi} - R\dot{\phi}\sen{\theta}\sen{\phi}, \\
+ \dot{y} = R\dot{\theta}\cos{\theta}\sen{\phi} + R\dot{\phi}\sen{\theta}\cos{\phi}, \\
+ \dot{z} = - R\dot{\theta}\sen{\theta}.
+\end{align*}
+
+Entonces la energía cinética se transforma en (usando el hecho de que la velocidad 
+angular es constante y por lo tanto $\dot{\phi} = \omega$),
+
+\begin{equation}
+ T = \frac{1}{2}m\left[R\dot{\theta} + R^2\omega^2\sen^2{\theta} \right],
+\end{equation}
+
+por lo que la lagrangiana del sistema será
+
+\begin{equation}
+ L = T - V = \frac{1}{2}m\left[R\dot{\theta} + R^2\omega^2\sen^2{\theta} \right] 
+ -  mgR(\cos{\theta} + 1).
+\end{equation}
+
+Y las ecuaciones de movimiento las obtenemos con la ecuación de Lagrange para 
+$\theta$, 
+
+\begin{equation}
+ \frac{d}{dt}\left(\frac{\partial L}{\partial \dot{\theta}}\right) - 
+ \frac{\partial L}{\partial \theta} = 0,
+\end{equation}
+
+\begin{equation}
+ \frac{d}{dt}\left( m\dot{\theta}R^2 \right) - 
+ - mR^2\omega^2\sen{\theta}\cos{\theta} + mgR\sen{\theta}  = 0,
+\end{equation}
+
+\begin{equation}
+ \boxed{\therefore R\ddot{\theta} - R\omega^2\sen{\theta}\cos{\theta} + g\sen{\theta}
+ = 0.}
+\end{equation}
+
+\begin{enumerate}[label=\alph*)]
+\setcounter{enumi}{1}
+ \item R:
+\end{enumerate}
+
+La energía total del sistema es 
+
+\begin{equation}
+ E = T + V =  \frac{1}{2}m\left[R\dot{\theta} + R^2\omega^2\sen^2{\theta} \right] 
+ +  mgR(\cos{\theta} + 1),
+\end{equation}
+
+de donde vemos que podemos estudiar este sistema como uno con potencial efectivo 
+
+\begin{equation}
+ V_{ef} =  \frac{1}{2}mR^2\omega^2\sen^2{\theta}  +  mgR(\cos{\theta} + 1),
+\end{equation}
+
+para calcular $\omega_0$, debemos derivar $V_{ef}$ con respecto a $\theta$ e 
+igualar a cero, con lo cual obtendremos el ángulo de equilibrio y con esto 
+podemos saber en que rangos se encontrará la frecuencia solicitada.
+
+\begin{equation}
+ \frac{d}{d\theta} \left[\frac{1}{2}mR^2\omega^2\sen^2{\theta} + 
+ mgR(\cos{\theta} + 1) \right] = 0,
+\end{equation}
+
+\begin{equation}
+ \cancel{m}R^{\cancel{2}}\omega^2\cancel{\sen{\theta}}\cos{\theta} - \cancel{m}\cancel{R} 
+ g\cancel{\sen{\theta}} = 0,
+\end{equation}
+
+\begin{equation}
+ R\omega^2\cos{\theta} - g = 0,
+\end{equation}
+
+de donde vemos que 
+
+\begin{equation}
+ \theta = \arccos{\left[\frac{g}{R\omega^2}\right]},
+\end{equation}
+
+con lo cual, debido a la definición de $\arccos$ que 
+
+\begin{equation}
+ \frac{g}{R\omega^2} < 1,
+\end{equation}
+
+y entonces 
+
+\begin{equation}
+ \boxed{\omega_0 > \sqrt{\frac{g}{R}}.}
+\end{equation}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 \end{document}
