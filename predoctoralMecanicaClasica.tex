@@ -443,6 +443,193 @@ con $A$ y $B$ constantes positivas y $r$ la separación entre los dos átomos, $
 
 \underline{Solución:} \vspace{.3cm}
 
+\begin{enumerate}[label=\alph*)]
+ \item R:
+\end{enumerate}
+
+Podemos ver que tratamos con un sistema de fuerzas centrales de dos partículas ya que 
+el potencial, y por ende la fuerza que existe entre los átomos de un gas inerte, está 
+dirigida a lo largo de la línea que los conecta. Para describir un sistema de dos 
+partículas generalmente necesitamos seis cantidades, en este caso escogeremos las 
+tres componentes del de centro de masa del sistema $R$ y las tres componentes de 
+la distancia relativa de las partículas $r = |\overrightarrow{r_1} - \overrightarrow{r_2}|$. 
+Ahora debido a que el movimiento de traslación del sistema como un todo, no es muy 
+interesante desde el punto de vista de la órbita de una partícula con respecto a la 
+otra, escogeremos el origen del sistema de coordenadas en el centro de masa de 
+las partículas, es decir que $R \equiv 0$. Y como es común en problemas de 
+dos cuerpos donde solo actúan fuerzas centrales, podemos reducir el problema 
+a un problema equivalente de un cuerpo, en el cual solo debemos determinar el movimiento 
+de una ``partícula'' de masa $\mu$ en el campo central descrito por la función 
+potencial $V(r)$, donde $\mu$ es la masa reducida del sistema definida como 
+
+\begin{equation}
+ \mu \equiv \frac{m_1m_2}{m_1+m_2}.
+\end{equation}
+
+Por otra parte, debido a que la energía potencial solo depende de la distancia de 
+la partícula al centro de fuerzas y no en la orientación, el sistema posee simetría 
+esférica; esto es, que la rotación del sistema a lo largo de cualquier eje fijo 
+a través del centro de fuerzas no puede afectar las ecuaciones de movimiento, y bajo 
+estas condiciones el impulso angular del sistema se conserva. De esto, debe quedar 
+claro que tanto el radio vector de la posición y el vector del impulso lineal 
+de la partícula yace en un plano normal al impulso angular, que está fijo en el 
+espacio, lo que significa que el movimiento en un campo central se da en un 
+plano. En conclusión hemos reducido el problema a uno equivalente de una masa 
+equivalente $\mu$ con dos grados de libertad, y por conveniencia podemos expresar 
+la lagrangiana es coordenadas planas polares de la forma 
+
+\begin{equation}
+ L = \frac{1}{2}\mu(\dot{r}^2 + r^2\dot{\theta}^2) - V(r),
+\end{equation}
+
+y sus sustituyendo el potencial dado, tenemos que la lagrangiana del sistema será
+
+\begin{equation}
+ L = \frac{1}{2}\mu(\dot{r}^2 + r^2\dot{\theta}^2) + \frac{2A}{r^6} 
+ - \frac{B}{r^{12}}.
+\end{equation}
+
+Para encontrar la hamiltoniana usamos la definición de impulso 
+
+\begin{equation}
+ p_i = \frac{\partial L}{\partial \dot{q^i}},
+\end{equation}
+
+para con esta cantidad, poder expresar las velocidades en término de los impulsos, y luego 
+sustituir sus valores en la lagrangiana para obtenerla en términos de las posiciones 
+e impulsos, construimos así la hamiltoniana con la ecuación 
+
+\begin{equation}
+ H = p\dot{q}(q,p,t) - L(q,p,t).
+\end{equation}
+
+Entonces tenemos, 
+
+\begin{equation}
+ p_r = \frac{\partial L}{\partial \dot{r}} = \mu\dot{r},
+\end{equation}
+
+de donde 
+
+\begin{equation}
+ \dot{r} = \frac{p_r}{\mu},
+\end{equation}
+
+y 
+
+\begin{equation}
+ p_\theta = \frac{\partial L}{\partial \dot{\theta}} = r^2\mu\dot{\theta},
+\end{equation}
+
+de donde 
+
+\begin{equation}
+ \dot{\theta} = \frac{p_\theta}{\mu r^2}.
+\end{equation}
+
+La hamiltoniana será entonces 
+
+\begin{equation}
+ H = p_r\dot{r} + p_\theta \dot{\theta} - L = 
+ p_r\frac{p_r}{\mu} + p_\theta\frac{p_\theta}{\mu r^2} - 
+ \frac{p_r^2}{2\mu} - \frac{p_\theta^2}{2\mu r^2} - \frac{2A}{r^6} 
+ + \frac{B}{r^{12}}
+\end{equation}
+
+\begin{equation}
+ \boxed{H = \frac{p_r^2}{2\mu} + \frac{p_\theta^2}{2\mu r^2} 
+ -\frac{2A}{r^6}  + \frac{B}{r^{12}}.}
+\end{equation}
+
+\begin{enumerate}[label=\alph*)]
+\setcounter{enumi}{1}
+ \item R:
+\end{enumerate}
+
+El estado de energía mínima corresponde a $p_r = p_\theta = 0$, es decir que 
+$T=0$, y ocurre en un $r_0$ que minimiza al potencial. Para obtener este $r_0$, 
+resolvemos para $r_0$ la siguiente ecuación, 
+
+\begin{equation}
+ \frac{d}{dt}\left(-\frac{2A}{r^6} + \frac{B}{r^{12}} \right) = 0,
+\end{equation}
+
+\begin{equation}
+ \frac{\cancel{12}A}{r^7} - \frac{\cancel{12}B}{r^{13}} = 0,
+\end{equation}
+
+de donde 
+
+\begin{equation}
+ A = \frac{B}{r_0^6},
+\end{equation}
+
+\begin{equation}
+ \therefore r_0 = \left( \frac{B}{A}\right)^{1/6},
+\end{equation}
+
+entonces debido a que la lagrangiana no depende del tiempo y la energía cinética 
+es una función cuadrática de las velocidades, la hamiltoniana será igual a la energía 
+total del sistema, y el estado de energía mínima lo obtenemos sustituyendo el $r_0$ 
+que obtuvimos (que representa la distancia entre los dos átomos para el estado de 
+energía mínima clásica del sistema) en la hamiltoniana, que resulta en 
+
+\begin{equation}
+ H = \frac{-2A}{B/A} + \frac{B}{(B/A)^2},
+\end{equation}
+
+\begin{equation}
+ \boxed{H = - \frac{A^2}{B}.}
+\end{equation}
+
+\begin{enumerate}[label=\alph*)]
+\setcounter{enumi}{1}
+ \item R:
+\end{enumerate}
+
+Si la energía es solo un poco mayor a la mínima, el sistema entrará en un régimen de 
+oscilaciones pequeñas, donde la frecuencia normal del sistema será la de un oscilador 
+armónico, 
+
+\begin{equation}
+ \omega = \sqrt{\frac{k}{\mu}},
+\end{equation}
+
+ahora sabemos que a primer orden 
+
+\begin{equation}
+ k = \left\zerodel\left(\frac{d^2V}{dr^2} \right)\right|_{r=r_0},
+\end{equation}
+
+entonces 
+
+\begin{equation}
+ k =  \left\zerodel\frac{d}{dr}\left(\frac{12A}{r^7} - \frac{12B}{r^{13}}\right)\right|_{r=r_0}
+ = \frac{12}{r^7}\left\zerodel\frac{d}{dr}\left(A - \frac{B}{r^{6}}\right)\right|_{r=r_0}
+\end{equation}
+
+\begin{equation}
+ k = \frac{12}{r^7}\left\zerodel\left(\frac{6B}{r^{7}}\right)\right|_{r=r_0}  
+ = \left\zerodel\left(\frac{72B}{r^{14}}\right)\right|_{r=r_0}
+\end{equation}
+
+evaluando en $r_0$, 
+
+\begin{equation}
+ k = \frac{72B}{(B/A)^{7/3}} = \frac{72\cancel{B}}{(B/A)^{4/3}(\cancel{B}/A)},
+\end{equation}
+
+\begin{equation}
+ \therefore k = 72A\left(\frac{A}{B}\right)^{4/3},
+\end{equation}
+
+y entonces la frecuencia del sistema si la energía es un poco mayor a la mínima 
+será
+
+\begin{equation}
+ \boxed{\omega = \sqrt{\frac{72A}{\mu}\left(\frac{A}{B}\right)^{4/3}}.}
+\end{equation}
+
 \subsection{Problema 2}
 
 Considere el siguiente sistema 
@@ -552,7 +739,7 @@ que es cero debido a la ecuación de movimiento obtenida.
  \item R:
 \end{enumerate}
 
-Para encontrar el hamiltoniano usamos la definición de impulso 
+Para encontrar la hamiltoniana usamos la definición de impulso 
 
 \begin{equation}
  p = \frac{\partial L}{\partial \dot{q}},
