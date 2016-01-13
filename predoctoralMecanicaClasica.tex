@@ -403,7 +403,7 @@ imposible (que es el eje correspondiente al momento principal de inercia interme
 Sobre un piso sin fricción, una partícula puntual choca elásticamente con una mancuerna de dos 
 modos diferentes mostrados en la figura (considere que las partículas de la mancuerna son también
 puntuales y que la barra tiene masa despreciable). ¿Qué cantidades se conservan en cada caso? 
-¿En qué caso la rapidez del centro de masa de la mancuerna, después dela colisión, es mayor?
+¿En qué caso la rapidez del centro de masa de la mancuerna, después de la colisión, es mayor?
 
 \vspace{.3cm}
 
@@ -416,6 +416,122 @@ puntuales y que la barra tiene masa despreciable). ¿Qué cantidades se conserva
  respecto al sistema de laboratorio y está colocada perpendicularmente a la dirección 
  de impacto.}
 \end{figure}
+
+\vspace{.3cm}
+
+\underline{Solución:} \vspace{.3cm}
+
+En ambos casos tenemos un sistema cerrado en el cual se presenta una colisión 
+elástica (no hay cambio en el estado interno de las partículas) sobre un piso sin
+fricción, por lo tanto, al conocer estas condiciones del choque sabemos que la 
+velocidad del centro de masa del sistema no cambia luego de la colisión, se 
+debe conservar la energía cinética, el impulso lineal y ya que el sistema es 
+cerrado también debe conservarse el impulso angular. 
+
+\vspace{.3cm}
+
+En este caso debido a la pregunta que nos hacen, es necesario calcular la 
+velocidad del centro de masa de la mancuerna luego de la colisión. Desde un punto 
+de vista cualitativo, el problema se puede resolver fácilmente al recordar los 
+simples experimentos en colisiones. En el primer caso la partícula de masa 
+$m$ choca en el medio de la mancuerna, que podemos considerar de masa $2m$, con 
+lo cual intuitivamente sabemos que cuando un cuerpo de menor masa con una velocidad 
+dada choca con un cuerpo de mayor masa en reposo, lo que ocurrirá, ya que el 
+choque es elástico, es que la primera partícula rebotará y comenzará a moverse 
+en sentido contrario, habiéndole transferido parte de su impulso lineal a la 
+mancuerna, y debido a que se debe conservar el impulso y la energía cinética, 
+es fácil ver que para contrarrestar el movimiento invertido de la primera partícula, 
+la mancuerna debe moverse más rápido que la partícula, ya que el la velocidad del 
+centro de masa no debe cambiar luego de la colisión. En el segundo caso, ya que 
+el choque es en el extremo de la mancuerna, tenemos un choque elástico de 
+partículas de igual masa donde una está en movimiento y la otra en reposo, y de 
+nuevo recordando los experimentos clásicos sabemos que la primera partícula se 
+detendrá y transferirá todo su impulso lineal a la partícula en reposo, pero debido 
+al tipo de choque, la velocidad del centro de masa de la mancuerna, será menor 
+que en el primer caso, ya que esto puede no ser tan intuitivo, hagamos unos pequeños 
+cálculos.
+
+\vspace{.3cm}
+
+En el caso en que la partícula choca a la mancuerna en el centro, y debido a que 
+la masa es despreciable, tenemos el choque de una partícula de masa $m$ con una 
+de masa $2m$. Recordando las ecuaciones para la conservación del impulso lineal y que 
+también por definición en un choque elástico la velocidad relativa de los dos cuerpos 
+es igual y de signo contrario a la existente antes de él, 
+
+\begin{equation}
+ mv_{i1} + 2mv_{i2} = mv_{f1} + 2mv_{f_2},
+\end{equation}
+
+\begin{equation}
+ v_{f1} - v_{f2} = - (v_{i1} - v_{i2}),
+\end{equation}
+
+que resultan en, 
+
+\begin{equation}
+ v_{1f} = \frac{(m - 2m)v_{1i} + 4mv_{i2}}{3m},
+\end{equation}
+
+\begin{equation}
+  v_{2f} = \frac{(2m - m)v_{2i} + 2mv_{i1}}{3m},
+\end{equation}
+
+y al usar el hecho de que $v_{i2}$ es cero, 
+
+\begin{equation}
+ v_{1f} = - \frac{v_{1i}}{3} = - \frac{v_0}{3},
+\end{equation}
+
+\begin{equation}
+  v_{2f} = \frac{2v_{i1}}{3} = \frac{2v_0}{3},
+\end{equation}
+
+tenemos que la velocidad del centro de masa de la mancuerna será, ya que pega justo en el 
+medio de la misma, en el primer caso de $2/3$ de la velocidad inicial de la partícula, 
+
+\vspace{.3cm}
+
+Ahora en el segundo caso, al chocar dos partículas de misma masa, tenemos 
+
+\begin{equation}
+ mv_{i1} + mv_{i2} = mv_{f1} + mv_{f_2},
+\end{equation}
+
+\begin{equation}
+ v_{f1} - v_{f2} = - (v_{i1} - v_{i2}),
+\end{equation}
+
+que resultan en, 
+
+\begin{equation}
+ v_{1f} = \frac{\cancelto{0}{(m - m)}v_{1i} + 2mv_{i2}}{2m},
+\end{equation}
+
+\begin{equation}
+  v_{2f} = \frac{\cancelto{0}{(m - m)}v_{2i} + 2mv_{i1}}{2m},
+\end{equation}
+
+y utilizando el hecho de que $v_{i2}$ es cero, 
+
+\begin{equation}
+ v_{1f} = 0,
+\end{equation}
+
+\begin{equation}
+ v_{2f} = v_{1i} = v_0,
+\end{equation}
+
+que era lo que esperábamos. Entonces la velocidad de la mancuerna debe ser $v_0$ pero 
+debido a que la masa de la mancuerna es de $2m$, la velocidad del centro de masa 
+será $1/2v_0$.
+
+\vspace{.3cm}
+
+Por lo tanto ya que en el primer caso la velocidad del centro de masa de la mancuerna 
+es de $2/3$ de la velocidad inicial, y en el segundo caso de $1/2$ de la velocidad 
+inicial, en el primer caso la velocidad de centro de masa de la mancuerna será 
+mayor.
 
 \section{Problemas}
 
