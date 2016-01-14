@@ -169,7 +169,7 @@ espacio fase de coordenadas e impulsos.
 \end{enumerate}
 
 Lo que nos garantiza, en la formulación de Hamilton-Jacobi, que la funcional generadora 
-proporcione una solución de las ecuaciones de Hamilton, es que ésta ea una integral 
+proporcione una solución de las ecuaciones de Hamilton, es que ésta sea una integral 
 completa, es decir que sea una solución de la ecuación en derivadas parciales resultante 
 en esta formulación, que contenga tantas constantes arbitrarias independientes como 
 variables independientes existan. Y debido a que en la ecuación de Hamilton-Jacobi 
@@ -216,6 +216,8 @@ debido a que $\omega = \sqrt{\omega_1^2 + \omega_2^2 + \omega_3^2}$, tendremos q
 $\omega_2^2 + \omega_3^2 \ll \omega_1^2$, y entonces $\omega = \sqrt{\omega_1^2} = 
 \omega_1$, y entonces podemos tomar a $\omega_1$ como constante, al menos 
 a primer orden.
+
+\vspace{.3cm}
 
 Tomando la derivada temporal de \eqref{eq:pregunta2eq2} 
 
@@ -276,6 +278,8 @@ Supongamos ahora que el movimiento es en dirección al eje $z$, utilizando los
 mismos argumentos, vemos que debido a que $\omega_3 \gg \omega_1,\omega_2$, 
 $|\omega| = \text{cte}$, entonces $\omega = \omega_3$, y podemos considerar 
 que $\omega_3$ es estable, al menos a primer orden. 
+
+\vspace{.3cm}
 
 Tomando la derivada temporal de \eqref{eq:pregunta2eq1} 
 
@@ -454,7 +458,7 @@ cálculos.
 \vspace{.3cm}
 
 En el caso en que la partícula choca a la mancuerna en el centro, y debido a que 
-la masa es despreciable, tenemos el choque de una partícula de masa $m$ con una 
+la masa de la barra es despreciable, tenemos el choque de una partícula de masa $m$ con una 
 de masa $2m$. Recordando las ecuaciones para la conservación del impulso lineal y que 
 también por definición en un choque elástico la velocidad relativa de los dos cuerpos 
 es igual y de signo contrario a la existente antes de él, 
@@ -488,7 +492,7 @@ y al usar el hecho de que $v_{i2}$ es cero,
 \end{equation}
 
 tenemos que la velocidad del centro de masa de la mancuerna será, ya que pega justo en el 
-medio de la misma, en el primer caso de $2/3$ de la velocidad inicial de la partícula, 
+medio de la misma, en el primer caso de $2/3$ de la velocidad inicial de la partícula.
 
 \vspace{.3cm}
 
@@ -574,7 +578,7 @@ interesante desde el punto de vista de la órbita de una partícula con respecto
 otra, escogeremos el origen del sistema de coordenadas en el centro de masa de 
 las partículas, es decir que $R \equiv 0$. Y como es común en problemas de 
 dos cuerpos donde solo actúan fuerzas centrales, podemos reducir el problema 
-a un problema equivalente de un cuerpo, en el cual solo debemos determinar el movimiento 
+a uno equivalente de un cuerpo, en el cual solo debemos determinar el movimiento 
 de una ``partícula'' de masa $\mu$ en el campo central descrito por la función 
 potencial $V(r)$, donde $\mu$ es la masa reducida del sistema definida como 
 
@@ -608,15 +612,15 @@ y sus sustituyendo el potencial dado, tenemos que la lagrangiana del sistema ser
 Para encontrar la hamiltoniana usamos la definición de impulso 
 
 \begin{equation}
- p_i = \frac{\partial L}{\partial \dot{q^i}},
+ p_i = \frac{\partial L}{\partial \dot{q}^i},
 \end{equation}
 
 para con esta cantidad, poder expresar las velocidades en término de los impulsos, y luego 
 sustituir sus valores en la lagrangiana para obtenerla en términos de las posiciones 
-e impulsos, construimos así la hamiltoniana con la ecuación 
+e impulsos. Construimos así la hamiltoniana con la ecuación 
 
 \begin{equation}
- H = p\dot{q}(q,p,t) - L(q,p,t).
+ H = \sum_i p_i\dot{q}^i(q,p,t) - L(q,p,t).
 \end{equation}
 
 Entonces tenemos, 
@@ -783,7 +787,7 @@ tener un punto de comparación. Usando las ecuaciones de Lagrange
 
 \begin{equation}
  \frac{d}{dt}\left(\frac{\partial L}{\partial \dot{q}}\right) 
- - \frac{\partial L}{\partial q}
+ - \frac{\partial L}{\partial q} = 0,
 \end{equation}
 
 \begin{equation}
@@ -791,8 +795,8 @@ tener un punto de comparación. Usando las ecuaciones de Lagrange
 \end{equation}
 
 Debido a que la lagrangiana depende explícitamente del tiempo, no existirán integrales 
-de movimiento, sino solo constantes de movimiento. Comúnmente las simetrías asociadas 
-a constantes de movimiento son un poco menos obvias de encontrar, y en general estas 
+de movimiento, sino sólo constantes de movimiento. Comúnmente las simetrías asociadas 
+a constantes de movimiento son un poco menos obvias de encontrar, y en general éstas 
 no provienen de una simetría en la forma estándar. En este caso podemos ver que 
 la siguiente transformación, 
 
@@ -811,7 +815,7 @@ y obtengamos las ecuaciones de movimiento desde las ecuaciones de Lagrange
 
 \begin{equation}
  \frac{d}{dt}\left(\frac{\partial L}{\partial \dot{Q}}\right) 
- - \frac{\partial L}{\partial Q},
+ - \frac{\partial L}{\partial Q} = 0,
 \end{equation}
 
 que nos dan
@@ -933,7 +937,7 @@ entonces la ecuación de Hamilton-Jacobi se transforma en
 \end{equation}
 
 y para que esta ecuación los coeficientes de $q$ y de $1$ deben ser idénticamente 
-cero, por lo tanto\footnote{Llamaremos $\int f(t) dt = F(t)$}
+cero, por lo tanto\footnote{Llamaremos $\int f(t) dt = F(t)$.}
 
 \begin{equation}
  \dot{A} + af(t) = 0 \Rightarrow dA = - a\int f(t)dt
@@ -1048,7 +1052,7 @@ eje de rotación.
 \end{enumerate}
 
 Debido a que la única fuerza que existe es la gravitacional, el potencial se 
-escribiría como (utilizando coordenadas polares)
+escribiría como (utilizando coordenadas esféricas)
 
 \begin{equation}
  V = mgz = mgR\cos{\theta},
@@ -1084,9 +1088,9 @@ debido a que existe la constricción de que $R = \text{cte}$, y recordamos que
 estamos usando coordenadas esféricas, tenemos que 
 
 \begin{align*}
- \dot{x} = R\dot{\theta}\cos{\theta}\cos{\phi} - R\dot{\phi}\sen{\theta}\sen{\phi}, \\
- \dot{y} = R\dot{\theta}\cos{\theta}\sen{\phi} + R\dot{\phi}\sen{\theta}\cos{\phi}, \\
- \dot{z} = - R\dot{\theta}\sen{\theta}.
+ \dot{x} &= R\dot{\theta}\cos{\theta}\cos{\phi} - R\dot{\phi}\sen{\theta}\sen{\phi}, \\
+ \dot{y} &= R\dot{\theta}\cos{\theta}\sen{\phi} + R\dot{\phi}\sen{\theta}\cos{\phi}, \\
+ \dot{z} &= - R\dot{\theta}\sen{\theta}.
 \end{align*}
 
 Entonces la energía cinética se transforma en (usando el hecho de que la velocidad 
